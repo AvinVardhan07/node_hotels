@@ -23,7 +23,7 @@ router.post('/', async (req,res)=> //POST METHOD FOR "MENU"
   }
   catch(err){
         console.log(err);
-       res.send("success")
+       res.status(404).json("success")
   }
 })
 

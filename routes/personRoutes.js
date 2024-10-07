@@ -71,7 +71,7 @@ router.get('/', async(req,res)=>{
  router.put('/:id', async(req, res)=>{
   try{
     const personId = req.params.id;// This implies the GET method;
-    const updatedPersonData = req.body;
+    const updatedPersonData = req.body;//post method implementation!
     const response = await Person.findByIdAndUpdate(personId, updatedPersonData,{
       new: true, // Return the updated document
       runValidators: true, // Run Mongoose validation ,
