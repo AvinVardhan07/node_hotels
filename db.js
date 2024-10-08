@@ -13,12 +13,7 @@ require('dotenv').config(); //Requiring DOTENV in both server.js file and in db.
 
 //establishing connection with the function call 'connect' which is a in built function of mongoose ODM-library!
 // STEP : 03 
-mongoose.connect(mongoURL,{                      
-    useNewUrlParser : true,  // its like a tip for the people , so that they(ex: waiters,servents,etc..) works with extra energy and efficiency and 
-                               //also they('these 2- usenNewUrlParser & useUnifiedToplology as considered as extra permissions and also given them as true!!')-  
-                              //-safely connects node with the mongoDB without any isues!
-    useUnifiedTopology : true
- });
+mongoose.connect(mongoURL)
 
 
 

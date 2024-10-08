@@ -14,6 +14,12 @@ const port = process.env.PORT || 3006;
 // using DOTENV);
 //const PORT = 3006;
 
+//general
+app.get('/',(req,res)=>{
+    res.send("This is general page");
+    
+})
+
 
 
 
