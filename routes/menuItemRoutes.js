@@ -12,9 +12,9 @@ const Person = require('./../models/person');
 router.post('/', async (req,res)=> //POST METHOD FOR "MENU"
   {
   try{ 
-    const data = req.body;
+    const data = req.body;//additional compared to get.
 
-    const newMenu= new MenuItem(data);
+    const newMenu= new MenuItem(data);//additional compared to get.
 
     const res = await newMenu.save();//Saving! the data**
     console.log("data saved!")
@@ -50,7 +50,7 @@ router.get('/:tasteType',async(req,res)=>{
  
   const tasteType = req.params.tasteType;
   try{
-   if(tasteType == 'Sweet' || workType == 'spicy' || workType == 'sour'){
+   if(tasteType == 'Sweet' || tasteType == 'spicy' || tasteType == 'sour'){
      const response = await MenuItem.find({taste: tasteType});
      console.log('TASTE END POINT GO FETCHED')
      res.status(200).json(response);

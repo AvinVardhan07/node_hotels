@@ -1,14 +1,16 @@
+
 const mongoose = require('mongoose'); //STEP : 01
-require('dotenv').config(); //Requiring DOTENV in both server.js file and in db.js also 
+require('dotenv').config(); 
+                          //Requiring DOTENV in both server.js file and in db.js also 
                             // because we are  letting the db.js to know about the DOTENV !! becoz to process the 
                             // thing called : "process.env.MONGDB_URL";
 
 //defining mongoDB URL
  /* --- STEP : 02 */
- //const mongoURL = process.env.MONGODB_URL_LOCAL;  
+ const mongoURL = process.env.MONGODB_URL_LOCAL;  
                                              //Note ://here : '/hotel' is the name of the our database and  //it(link) will be available in mongoDB compass!
                                                     
- const mongoURL = process.env.MONGODB_URL;
+ //const mongoURL = process.env.MONGODB_URL;
   
 
 //establishing connection with the function call 'connect' which is a in built function of mongoose ODM-library!
